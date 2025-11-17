@@ -343,7 +343,8 @@ void tablaInventario(int pantallasF, int tarjetaRF, int memoriasF, int discoDF)
     printf("-------------------------------------------------------------\n");
 }
 
-void tiempo(int tiempoF[], int cont, int cantidad[]) {
+int tiempo(int tiempoF[], int cont, int cantidad[]) {
+    int si;
     int dias;
     int validar;
 
@@ -374,10 +375,14 @@ void tiempo(int tiempoF[], int cont, int cantidad[]) {
 
         if (minutos_disponibles >= minutos_necesarios) {
             printf("El tiempo ES suficiente para completar la fabricacion.\n");
+            si=1;
+
         } else {
             printf("El tiempo NO es suficiente para completar la fabricacion.\n");
+            si=-1;
         }
     }
+ return si;
 }
 
 int inventarioVacio(int cantidad[], int cont) {
