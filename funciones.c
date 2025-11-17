@@ -90,7 +90,7 @@ int tarjetaR[], int memorias[], int discoD[], int cont)
             while (getchar() != '\n');
         }
         while (getchar() != '\n');
-        printf("--------------------------");
+        printf("--------------------------\n");
 
         cont++; 
     }
@@ -391,4 +391,5 @@ int inventarioVacio(int cantidad[], int cont) {
 
     return 1; // no hay inventario
 }
+
 
