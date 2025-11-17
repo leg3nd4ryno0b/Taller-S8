@@ -128,6 +128,7 @@ int main()
                 printf("No hay productos ingresados aun.\n");
                 break;
             }
+            int si;
             
 
             pedidos(nombres, cont, cantidad);
@@ -160,16 +161,25 @@ int main()
             }
 
 
-            pantallasF -= pantallasNecesarias;
-            tarjetaRF -= tarjetasNecesarias;
-            memoriasF -= memoriasNecesarias;
-            discoDF -= discosNecesarios;
 
-            tiempo(tiempoF, cont, cantidad);
-            printf("\n------------------------------------------------\n");
-            printf(" PEDIDO REGISTRADO EXITOSAMENTE!\n");
-            printf(" Recursos descontados del inventario.\n");
-            printf("------------------------------------------------\n");
+
+            si=tiempo(tiempoF, cont, cantidad);
+            if (si==1)
+            {
+                printf("\n------------------------------------------------\n");
+                printf(" PEDIDO REGISTRADO EXITOSAMENTE!\n");
+                printf(" Recursos descontados del inventario.\n");
+                printf("------------------------------------------------\n");       
+                pantallasF -= pantallasNecesarias;
+                tarjetaRF -= tarjetasNecesarias;
+                memoriasF -= memoriasNecesarias;
+                discoDF -= discosNecesarios;         
+            }else{
+                printf("Tiempo insuficiente!\nPedido CANCELADO\n");
+            }
+            
+
+
 
             break;
         }
