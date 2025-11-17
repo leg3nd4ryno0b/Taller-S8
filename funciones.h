@@ -7,5 +7,5 @@ void eliminar(char nombre[][50], int tiempoF[], int cantidad[], int productos[],
 void abastecer(int *pantallasF, int *tarjetaRF, int *memoriasF, int *discoDF);
 void pedidos(char nombres[][50], int cont, int cantidad[]);
 void tablaInventario(int pantallasF, int tarjetaRF, int memoriasF, int discoDF);
-void tiempo(int tiempoF[], int cont, int cantidad[]);
+int tiempo(int tiempoF[], int cont, int cantidad[]);
 int inventarioVacio(int cantidad[], int cont);
